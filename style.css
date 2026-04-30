@@ -1,224 +1,65 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background-color: #ffb400; font-family: 'Lato', sans-serif; display: flex; justify-content:  center;  padding: 50px 20px; }
-
-.wrapper { display: flex; max-width: 1200px; width: 100%; }
-
-/* Sidebar Area */
-.sidebar { flex: 0.3; color: white; padding-top: 100px; padding-right: 30px; }
-.badge { background: rgba(255,255,255,0.2); padding: 5px 10px; font-size: 10px; letter-spacing: 1px; }
-.sidebar h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 25px 0; line-height: 1.2; }
-.feature-list { list-style: none; }
-.feature-list li { margin: 15px 0; font-size: 14px; position: relative; padding-left: 25px; }
-.feature-list li::before { content: "■"; position: absolute; left: 0; font-size: 10px; }
-
-/* Main Box */
-
-.main-content { flex: 0.7; background: white; box-shadow: 0 40px 100px rgba(11, 11, 11, 0.3); }
-/* style.css ke is part mein color update karein */
-
-.logo { 
-    color: #ffffff; /* Yahan agar aap #ffffff likhengi to text WHITE ho jayega */
-    font-weight: bold; 
-    letter-spacing: 2px; 
-    font-size: 14px; 
-    text-transform: uppercase;
-}
-
-/* Nav */
-header { 
-    background: #111; 
-    display: flex; 
-    justify-content: space-between; 
-    padding: 15px 30px; 
+body {
+    background-color: #000; /* Dark Background like the logo */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 0; /* Isse gap khatam ho jayega */
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-header nav a { color: #fbf7f7;
-     text-decoration: none; font-size: 11px; margin-left: 15px; text-transform: uppercase; }
+.logo-container { text-align: center; color: white; }
 
-/* --- Hero Section Fix --- */
-.hero {
-    width: 100%;
-    height: 550px; /* Screenshot ke mutabiq height */
-    background: url('https://media-amazon.com') no-repeat center center/cover;
-    position: relative;
-    margin-top: 0; /* Header ke sath gap khatam */
+.hacker-icon svg {
+    width: 120px;
+    color: #fff;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+    animation: pulse 2s infinite;
 }
 
-.hero-overlay {
-   background: rgb(147 120 23); /* Thoda sa dark filter */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center; /* Vertical center */
-    padding-left: 10%; /* Text ko thoda left se hata kar screenshot jaisa rakhne ke liye */
-}
-
-.hero-content {
-    color: #fbfbfa;
-    max-width: 600px;
-    text-align: left; /* Screenshot mein text left-aligned hai */
-}
-
-.hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+.glitch {
+    font-size: 40px;
     font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.red-dot { color: #ff0000; } /* Screenshot mein 'C' ke pass red effect hai */
-
-.hero-content p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #ddd;
-    margin-bottom: 25px;
-}
-
-.order-btn {
-    background: none;
-    border: 1px solid #ffb400;
-    color: #ffb400;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.order-btn:hover {
-    background: #ffb400;
-    color: #000;
-}
-
-/* Slider Dots Styling */
-.slider-dots {
-    margin-top: 40px;
-    display: flex;
-    gap: 8px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    background: #ddd9d2;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.dot.active {
-    background: #ffb400; /* Yellow dot for active slide */
-}
-
-
-/* --- Services Section Safety --- */
-.services {
-    clear: both; /* Takay upar wala floating content yahan na aaye */
-    padding: 80px 0;
+    letter-spacing: 5px;
     position: relative;
-    background: #ffffff;
-    z-index: 5;
+    margin-top: 20px;
 }
 
-
-/* Services */
-.services { padding: 50px 30px; text-align: center;
-background-color: #381802;
-color: #fbf8f8;
- }
-.s-grid { display: flex; justify-content: space-around; margin-top: 30px; }
-.s-item img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 4px solid #eee; }
-.s-item h4 { font-size: 12px; margin-top: 10px; letter-spacing: 1px; }
-
-/* New Detail Portion Styling */
-.details-section { padding: 40px; background: #909046; }
-.detail-card { display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
-.detail-card.reverse { flex-direction: row-reverse; }
-.detail-card img { width: 220px; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-.detail-info h4 { font-family: 'Playfair Display', serif; color: #ffb400; font-size: 1.2rem; margin-bottom: 10px; }
-.detail-info p { font-size: 13px; color: #0a0909; line-height: 1.5; }
-
-/* Menu Combo */
-.menu-combo { display: flex; background: #000; color: white; }
-.menu-text { flex: 1.5; padding: 40px; }
-.menu-text h3 { color: #ffb400; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; display: inline-block; }
-.p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 30px; }
-.p-row { display: flex; justify-content: space-between; border-bottom: 1px solid #faf7f7; font-size: 12px; padding: 5px 0; }
-.p-row span:last-child { color: #ffb400; }
-.menu-img { flex: 1; overflow: hidden; }
-.menu-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
-
-/* --- Updated Contact Section --- */
-.contact { 
-    padding: 50px 40px; 
-    display: flex; 
-    justify-content: space-between; 
-    background-color: #fff; /* Main background white hi rakha hai */
+/* Glitch Animation for Video */
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: black;
 }
 
-.accent-line { 
-   
-    width: 40px; 
-    height: 3px; 
-    background: #ffb400; 
-    margin-top: 5px; 
+.glitch::before {
+    left: 2px; text-shadow: -2px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 
-.contact-form-box { 
-
-    flex: 0.6; 
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Isse har box ke darmiyan gap (alag-alag look) aayega */
+.glitch::after {
+    left: -2px; text-shadow: -2px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
 }
 
-.line-input { 
-    border: 1px solid #0e0e0e; /* Har box ka alag border */
-    padding: 12px 15px; 
-    font-size: 12px;
-    background-color: #8a3904; /* Brown background jo aapne bataya */
-    
-    /* Yahan se text white hoga */
-    color: #ffffff !important; 
-    outline: none;
+.sub-text {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #888;
+    margin-top: 10px;
 }
 
-/* Isse box ke andar wala 'Your Name/Email' wala text bhi white ho jayega */
-.line-input::placeholder {
-    color: #ffffff;
-    opacity: 0.8; /* Thoda sa halka takay typing text se alag lage */
+@keyframes glitch-anim {
+    0% { clip: rect(31px, 9999px, 94px, 0); }
+    20% { clip: rect(62px, 9999px, 42px, 0); }
+    100% { clip: rect(15px, 9999px, 85px, 0); }
 }
 
-/* Jab user click karke likhe tab bhi white hi rahe */
-.line-input:focus {
-    color: #ffffff;
-    border-color: #ffb400; /* Click karne par border yellow ho jayega VIP look ke liye */
-}
-
-
-.send-btn { 
-    background: #ffb400; 
-    border: none; 
-    padding: 10px 30px; 
-    font-weight: bold; 
-    margin-top: 10px; 
-    cursor: pointer; 
-    color: #000;
-    width: fit-content;
-}
-
-.send-btn:hover {
-    background: #000;
-    color: #ffb400;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .wrapper { flex-direction: column; }
-    .sidebar { padding: 20px; text-align: center; }
-    .detail-card, .detail-card.reverse { flex-direction: column; text-align: center; }
-    .menu-combo { flex-direction: column; }
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
 }
